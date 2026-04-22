@@ -1,44 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Yutopia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yutopia</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f6ef;
+  color: #111;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-btn {
+  background: #f4c400;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: white;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #e6007e;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.primary {
+  background: #f4c400;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.secondary {
+  background: none;
+  border: none;
+}
+
+/* ANALYTICS */
+.analytics {
+  padding: 80px 60px;
+}
+
+.analytics h2 {
+  font-family: 'Playfair Display';
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+.number {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #f4c400;
+  font-weight: bold;
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 80px 60px;
+}
+
+.reviews h2 {
+  font-family: 'Playfair Display';
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  font-size: 14px;
+}
+
+.name {
+  margin-top: 15px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+
+</style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <header>
-    <div class="logo">🌞 Yutopia</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Opportunities</a>
-      <a href="#">FAQs</a>
-      <a href="#">Contact</a>
-    </nav>
-    <button class="nav-btn">Join as volunteer</button>
-  </header>
+<header>
+  <div class="logo">🌞 Yutopia</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Opportunities</a>
+    <a href="#">FAQs</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="nav-btn">Join as volunteer</button>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <p class="tag">Yutopia</p>
+<section class="hero">
+  <h1>
+    Empowering <span>girls</span> to <br>
+    build their future.
+  </h1>
 
-    <h1>
-      Empowering <span>girls</span> to <br>
-      build their future.
-    </h1>
+  <div class="buttons">
+    <button class="primary">Join as volunteer</button>
+    <button class="secondary">Support us</button>
+  </div>
+</section>
 
-    <div class="buttons">
-      <button class="primary">Join as volunteer</button>
-      <button class="secondary">Support us</button>
+<section class="analytics">
+  <h2>Now, Let's talk in numbers.</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      We have helped over 15k students till now.
+      <div class="number">15k+</div>
     </div>
-  </section>
+
+    <div class="card">
+      A total of 225 volunteers have joined.
+      <div class="number">225+</div>
+    </div>
+
+    <div class="card">
+      What's better than +120 sponsors? Double.
+      <div class="number">240+</div>
+    </div>
+
+    <div class="card">
+      We have made 10 partnerships till now.
+      <div class="number">10</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="reviews">
+  <h2>That's what they say about us.</h2>
+
+  <div class="review-grid">
+
+    <div class="review">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      <div class="name">Mariam Amr</div>
+    </div>
+
+    <div class="review">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      <div class="name">Mariam Amr</div>
+    </div>
+
+    <div class="review">
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      <div class="name">Mariam Amr</div>
+    </div>
+
+  </div>
+
+</section>
 
 </body>
 </html>
